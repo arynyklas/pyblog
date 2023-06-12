@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyBlog</title>
+    <script src="/static/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="docs">
+            <h1>
+                API docs - <a href="/api/docs" target="blank">/api/docs</a>
+            </h1>
+        </div>
+        <br><br>
+
+        <!-- <div class="private_profile">
+            <p>This user has set their profile to private.</p>
+        </div> -->
+
+        <div class="new_post">
+            <form class="new_post_form">
+                <div class="new_post_form_input">
+                    <label for="title" class="new_post_form_input_label">Title</label>
+                    <input class="new_post_form_input_input" type="text" id="title" name="title" placeholder="Required" required="" value="">
+                </div>
+                <div class="new_post_form_input">
+                    <label for="content" class="Posts_label__EvsCt">Content</label>
+                    <textarea class="new_post_form_input_input" id="content" name="content" placeholder="Required" rows="1" required=""></textarea>
+                </div>
+                <div class="new_post_options"></div>
+                <button class="new_post_button">Publish</button>
+            </form>
+        </div>
+        <!-- if admin.is_superuser => <svg width="14" height="14" viewBox="0 0 372 372" fill="var(--post-sub-text)" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M207.231 9.23078L235.231 37.2308C240.923 42.9231 248.461 46 256.461 46H296C311.538 46 324.461 57.8462 325.846 73.0769L326 76V115.538C326 123.538 329.231 131.077 334.769 136.769L362.769 164.769C373.692 175.692 374.462 193.077 364.769 204.923L362.769 207.231L334.769 235.231C329.077 240.923 326 248.462 326 256.462V296C326 311.538 314.154 324.462 298.923 325.846L296 326H256.461C248.461 326 240.923 329.231 235.231 334.769L207.231 362.769C196.308 373.692 178.923 374.462 167.077 364.769L164.769 362.769L136.769 334.769C131.077 329.077 123.538 326 115.538 326H75.9999C60.4615 326 47.5384 314.154 46.1538 298.923L46 296V256.462C46 248.462 42.7692 240.923 37.2307 235.231L9.23072 207.231C-1.69236 196.308 -2.46159 178.923 7.23072 167.077L9.23072 164.769L37.2307 136.769C42.923 131.077 46 123.538 46 115.538V76C46 59.3846 59.3846 46 75.9999 46H115.538C123.538 46 131.077 42.7692 136.769 37.2308L164.769 9.23078C176.461 -2.46153 195.538 -2.46153 207.231 9.23078ZM256.461 133.077C249.846 127.846 240.615 128.308 234.615 134L233.077 135.692L164.615 221.231L137.692 194.308L136 192.769C129.538 187.846 120.154 188.308 114.154 194.308C108.154 200.308 107.692 209.538 112.615 216.154L114.154 217.846L154.154 257.846L155.846 259.385C162.308 264.308 171.538 263.846 177.385 258.154L178.923 256.462L258.923 156.462L260.154 154.615C264.308 147.538 262.769 138.462 256.308 133.077H256.461Z" fill="var(--post-sub-text)"></path></svg> -->
+        <ul id="posts">
+            <!-- <li>
+                <div class="post">
+                    <div class="post_header">
+                        <h3 class="post_title_h">
+                            <a href="/post/1">Title</a>
+                        </h3>
+                        <h3 class="post_datetime">Today at 0:00 AM</h3>
+                    </div>
+                    <div class="post_author">
+                        <span>Author: <a role="link" href="/user/admin">admin</a></span>
+                    </div>
+                    <div class="post_content">
+                        <img src="/static/posts/1.png">
+                        <p>Content</p>
+                    </div>
+                    <div class="post_buttons">
+                        <div class="post_button_reactions">
+                            <button class="post_button_reaction_likes" tabindex="0" style="transform: none;"></button>
+                        </div>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

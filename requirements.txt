@@ -1,0 +1,5 @@
+fastapi==0.95.2
+beanie==1.16.6
+fastapi-users==10.3.0
+fastapi_users_db_beanie==2.0.0
+python-multipart==0.0.5

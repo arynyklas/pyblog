@@ -1,0 +1,15 @@
+version: "0.0.1"
+host: "127.0.0.1"
+port: 80
+db:
+  uri: mongodb://localhost:27017
+  name: PyBlog
+secret: "aVJC5xXp4dJDEXWLGDcwk9Wt"
+secrets_lifetime: 2592000
+verifications_lifetime: 3600
+user_limits:
+  text_length: 2048
+reactions_keys:
+  - likes
+  - dislikes
+api_posts_limit: 5
