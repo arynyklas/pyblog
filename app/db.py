@@ -9,15 +9,8 @@ from pydantic import Field
 from asyncio import get_event_loop
 
 from app.utils import get_timestamp
-from app.config import config
 
-from typing import Optional, Dict
-
-
-POST_DEFAULT_REACTIONS: Dict[str, int] = {
-    reactions_key: 0
-    for reactions_key in config.reactions_keys
-}
+from typing import Optional
 
 
 class BaseDocument(Document):
@@ -52,7 +45,15 @@ class Post(BaseDocument):
     author_id: PydanticObjectId
     is_pinned: bool = False
     edited_at: Optional[int] = None
-    reactions: Dict[str, int] = POST_DEFAULT_REACTIONS
+
+
+class PostReaction(BaseDocument):
+    class Settings:
+        name: str = "post_reactions"
+
+    user_id: PydanticObjectId
+    post_id: PydanticObjectId
+    reaction: str
 
 
 async def user_db_get_by_email_or_username(self, username: str) -> Optional[User]:
@@ -77,6 +78,8 @@ async def init_db(db_uri: str, db_name: str) -> None:
     await init_beanie(
         database = client.get_database(db_name),
         document_models = [
-            User
+            User,
+            Post,
+            PostReaction
         ]
     )

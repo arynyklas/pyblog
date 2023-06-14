@@ -31,7 +31,7 @@ class Config(BaseModel):
     secrets_lifetime: int
     verifications_lifetime: int
     user_limits: UserLimitsConfig
-    reactions_keys: List[str]
+    reactions_list: List[str]
     api_posts_limit: int
 
 

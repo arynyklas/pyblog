@@ -9,7 +9,7 @@ secrets_lifetime: 2592000
 verifications_lifetime: 3600
 user_limits:
   text_length: 2048
-reactions_keys:
-  - likes
-  - dislikes
+reactions_list:
+  - like
+  - dislike
 api_posts_limit: 5

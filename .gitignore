@@ -3,3 +3,4 @@ __pycache__
 **__**
 !__init__.py
 !__main__.py
+static/posts
